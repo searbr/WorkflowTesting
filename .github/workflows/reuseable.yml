@@ -1,0 +1,15 @@
+on:
+    workflow_call:
+        inputs:
+            print:
+                required: false
+                default: "Default Print"
+                type: string
+
+jobs:
+    reusable_workflow_job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Printing
+            run: echo "Printing: ${{ inputs.print }}"
+            shell: bash
