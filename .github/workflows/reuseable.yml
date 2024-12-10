@@ -3,7 +3,7 @@ on:
         inputs:
             print:
                 required: false
-                default: "Default Print"
+                default: 'Default Print'
                 type: string
 
 jobs:
@@ -11,5 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Printing
-            run: echo "Printing: ${{ inputs.print }}"
+            env:
+                PRINT: ${{ inputs.print }}
+            run: echo "Printing: $PRINT"
             shell: bash
