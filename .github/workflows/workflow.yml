@@ -7,5 +7,9 @@ on:
     push:
 
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/reuseable.yml
+    call-workflow:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - uses: ./.github/workflows/reuseable.yml
