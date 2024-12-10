@@ -8,4 +8,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: .github/workflows/reuseable.yml
+    uses: ./.github/workflows/reuseable.yml
