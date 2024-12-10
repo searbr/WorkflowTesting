@@ -11,5 +11,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Printing
-            run: echo "Printing: ${{ inputs.print }}"
+            run: echo "Printing: "
             shell: bash
